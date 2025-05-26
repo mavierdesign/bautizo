@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Hero principal */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #fffefc, #f7e7b3); /* blanco a dorado pastel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Decoraciones con círculos suaves */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero::before {
+  width: 350px;
+  height: 350px;
+  top: -80px;
+  left: -80px;
+  background: radial-gradient(circle, #f4e7e7, transparent 70%);
+}
+
+.hero::after {
+  width: 250px;
+  height: 250px;
+  bottom: -60px;
+  right: -60px;
+  background: radial-gradient(circle, #fffaf0, transparent 70%);
+}
+
+/* Contenedor del texto */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Texto */
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+color: #6d0000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+.hero-date {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-content {
+    padding: 1.5rem;
+  }
+}
+
+
+/* Iconos decorativos */
+.icon-angel, .icon-flower {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: floatAnimation 6s ease-in-out infinite;
+  opacity: 0.7;
+  pointer-events: none; /* Para que no interfieran al hacer click */
+  z-index: 0; /* Debajo del contenido */
+}
+
+/* Posiciones */
+.icon-angel.top-left {
+  top: 20px;
+  left: 20px;
+  background-image: url('icons/volar.png'); /* Cambia por tu ruta */
+  animation-delay: 4s;
+}
+
+.icon-flower.top-right {
+  top: 30px;
+  right: 30px;
+  background-image: url('icons/flor.png'); /* Cambia por tu ruta */
+  animation-delay: 4s;
+}
+
+.icon-angel.bottom-right {
+  bottom: 40px;
+  right: 50px;
+  background-image: url('icons/volar.png'); /* Cambia por tu ruta */
+  animation-delay: 4s;
+}
+
+.icon-flower.bottom-left {
+  bottom: 40px;
+  left: 50px;
+  background-image: url('icons/flor.png'); /* Cambia por tu ruta */
+  animation-delay: 4s;
+}
+
+/* Animación de flotación */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+
+/*CUENTA REGRESIVA*/
+.inline-countdown {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.inline-countdown div {
+  background: #fff;
+  border: 1px solid #e6ca6f;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  min-width: 70px;
+}
+
+.inline-countdown span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6d0000;
+}
+
+.inline-countdown p {
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/*DATOS BAUTIZADO*/
+/* DATOS BAUTIZADO */
+.info-section {
+  background: linear-gradient(to bottom, #fffefc, #fff9e6);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.info-section::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background: url('icons/volar.png') no-repeat center/contain;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.info-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  background: url('icons/flor.png') no-repeat center/contain;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.info-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #deb52f;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.baby-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6d0000;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.family-info {
+  position: relative;
+  z-index: 1;
+}
+
+.family-info p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.family-info strong {
+  color: #6d0000;
+}
+
+
+/*PROTOCOLO*/
+.timeline-section {
+  background: #fdfaf4;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.timeline-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3rem;
+  color: #deb52f;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  background: #fff;
+  border-left: 4px solid #deb52f;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.timeline-item .icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-item .icon img {
+  width: 100%;
+  height: auto;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #6d0000;
+}
+
+.timeline-content p {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive: apila íconos arriba del texto en móvil */
+@media (max-width: 600px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item .icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-item {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/*UBICACIONES*/
+
+.location-section {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.location-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3rem;
+  color: #deb52f;
+  margin-bottom: 3rem;
+}
+
+.location-container {
+  display: grid;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+  background: #fdfaf4;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+
+.location-image {
+  width: 100%;
+  height: 200px;
+  background: #eaeaea;
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-img {
+  filter: grayscale(100%) blur(1px);
+  opacity: 0.7;
+}
+
+.location-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.location-info h3 {
+  font-size: 1.2rem;
+  color: #6d0000;
+  margin-bottom: 0.5rem;
+}
+
+.location-info p {
+  color: #444; /* o prueba #6d0000 para vino */
+  margin-bottom: 0.5rem;
+}
+
+.map-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #deb52f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.map-btn:hover {
+  background-color: #caa425;
+}
+
+/* Responsive */
+@media (min-width: 700px) {
+  .location-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.location-section {
+  position: relative;
+  overflow: hidden; /* asegura que decoraciones no rompan el diseño */
+}
+
+/* Ángel decorativo superior izquierdo */
+.location-section::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background: url('icons/volar.png') no-repeat center/contain;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Flor decorativa inferior derecho */
+.location-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: url('icons/flor.png') no-repeat center/contain;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+
+/*AGRADECIMIENTO*/
+/* AGRADECIMIENTO */
+.thanks-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #fdfaf4;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.thanks-content {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(3px);
+}
+
+.thanks-icon img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+  animation: flutter 3s ease-in-out infinite;
+}
+
+.thanks-section h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #6d0000;
+  margin-bottom: 1rem;
+}
+
+.thanks-section p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+@keyframes flutter {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
