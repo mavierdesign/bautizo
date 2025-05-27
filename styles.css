@@ -159,6 +159,72 @@ color: #6d0000;
   }
 }
 
+/*Listo dorado*/
+.ribbon-wrapper {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(90deg, #d4af37, #deb52f, #d4af37);
+  padding: 0.8rem 2.5rem;
+  margin: 1.5rem 0;
+  overflow: visible;
+  z-index: 1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeInUp 1.2s ease-out;
+  border-radius: 4px;
+}
+
+/* Texto */
+.ribbon-wrapper .hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Brillo */
+.ribbon-wrapper .shine {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Puntas realistas del listón */
+.ribbon-tail {
+  position: absolute;
+  width: 25px;
+  height: 30px;
+  background: #d4af37;
+  bottom: -25px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0); /* V hacia abajo */
+  z-index: 0;
+}
+
+/* Izquierda */
+.ribbon-tail.left {
+  left: 20px;
+}
+
+/* Derecha */
+.ribbon-tail.right {
+  right: 20px;
+}
+
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
 
 /*CUENTA REGRESIVA*/
 .inline-countdown {
@@ -462,19 +528,34 @@ color: #6d0000;
 
 
 /*AGRADECIMIENTO*/
-/* AGRADECIMIENTO */
 .thanks-section {
   position: relative;
   overflow: hidden;
-  background-color: #fdfaf4;
   padding: 4rem 2rem;
   text-align: center;
+  background-image: url('img/bautizo.png'); /* tu imagen */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
+/* Capa para oscurecer suavemente la imagen de fondo */
+.thanks-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)); /* menos opaco */
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
+
 .thanks-content {
+  position: relative;
+  z-index: 1;
   max-width: 700px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.219);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
@@ -506,4 +587,53 @@ color: #6d0000;
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
+}
+
+
+
+
+/*BORDE DECORADO*/
+.decorated-border {
+  position: relative;
+  padding: 2rem;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: #fffefc;
+  border: double 4px #d4af37;
+}
+
+
+.corner {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.corner.top-left {
+  top: 0;
+  left: 0;
+  background-image: url('img/corner1.png');
+}
+
+.corner.top-right {
+  top: 0;
+  right: 0;
+  background-image: url('img/corner2.png');
+}
+
+.corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  background-image: url('img/corner4.png');
+}
+
+.corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  background-image: url('img/corner3.png');
 }

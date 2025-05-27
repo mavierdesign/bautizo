@@ -10,143 +10,157 @@
    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-<!-- ENCABEZADO -->
-    <header class="hero">
-  <!-- Iconos decorativos -->
-  <div class="icon-angel top-left"></div>
-  <div class="icon-flower top-right"></div>
-  <div class="icon-angel bottom-right"></div>
-  <div class="icon-flower bottom-left"></div>
+  <div class="decorated-border">
+    <!-- Esquinas -->
+  <div class="corner top-left"></div>
+  <div class="corner top-right"></div>
+  <div class="corner bottom-left"></div>
+  <div class="corner bottom-right"></div>
+    <!-- ENCABEZADO -->
+     <div class="page-content">
+        <header class="hero">
+      <!-- Iconos decorativos -->
+      <div class="icon-angel top-left"></div>
+      <div class="icon-flower top-right"></div>
+      <div class="icon-angel bottom-right"></div>
+      <div class="icon-flower bottom-left"></div>
 
-  <div class="hero-content">
-    <p class="hero-subtitle">Acompáñanos en un día muy especial</p>
-    <h1 class="hero-title">Santiago Elías Ramírez Torres</h1>
-    <p class="hero-date">21 de junio de 2025</p>
+      <div class="hero-content">
+        <p class="hero-subtitle">Acompáñanos en un día muy especial</p>
+        <div class="ribbon-wrapper">
+          <span class="shine"></span>
+          <h1 class="hero-title">Santiago Elías Ramírez Torres</h1>
+          <span class="ribbon-tail left"></span>
+          <span class="ribbon-tail right"></span>
+        </div>
+        <p class="hero-date">21 de junio de 2025</p>
 
-    <div class="inline-countdown" id="countdown">
-      <div><span id="days">--</span><p>días</p></div>
-      <div><span id="hours">--</span><p>horas</p></div>
-      <div><span id="minutes">--</span><p>min</p></div>
-      <div><span id="seconds">--</span><p>seg</p></div>
+        <div class="inline-countdown" id="countdown">
+          <div><span id="days">--</span><p>días</p></div>
+          <div><span id="hours">--</span><p>horas</p></div>
+          <div><span id="minutes">--</span><p>min</p></div>
+          <div><span id="seconds">--</span><p>seg</p></div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- DATOS DEL BAUTIZADO -->
+    <section class="info-section" id="datos-bautizado">
+      <h2 class="info-title" data-aos="fade-down">Con amor te invitamos al bautizo de</h2>
+      <p class="baby-name" data-aos="zoom-in" data-aos-delay="200">Santiago Elías Ramírez Torres</p>
+
+      <div class="family-info" data-aos="fade-up" data-aos-delay="400">
+        <p><strong>Hijo de:</strong><br> Andrés Ramírez López y Mariana Torres de Ramírez</p>
+        <p><strong>Padrinos:</strong><br> Joaquín Herrera Díaz y Beatriz Gómez Rivas</p>
+      </div>
+    </section>
+
+
+    <!--PROTOCOLO-->
+    <section class="timeline-section">
+      <h2 class="timeline-title">Protocolo del evento</h2>
+
+      <div class="timeline" data-aos="fade-up">
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="icon">
+            <!-- reemplaza con tu ícono de iglesia -->
+            <img src="icons/bautizo.png" alt="Icono Misa">
+          </div>
+          <div class="timeline-content">
+            <h3>12:00 PM</h3>
+            <p>Misa en la Parroquia de Nuestra Señora de Guadalupe</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="icon">
+            <!-- reemplaza con tu ícono de llegada -->
+            <img src="icons/salon.png" alt="Icono Bienvenida">
+          </div>
+          <div class="timeline-content">
+            <h3>1:00 PM</h3>
+            <p>Bienvenida en Salón D’Romherz</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="icon">
+            <!-- reemplaza con tu ícono de comida -->
+            <img src="icons/comida.png" alt="Icono Comida">
+          </div>
+          <div class="timeline-content">
+            <h3>2:00 PM</h3>
+            <p>Comida</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="icon">
+            <!-- reemplaza con tu ícono de show -->
+            <img src="icons/evento.png" alt="Icono Show">
+          </div>
+          <div class="timeline-content">
+            <h3>3:00 PM</h3>
+            <p>Show de payasos / Actividades recreativas</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!--UBICACIONES-->
+    <section class="location-section">
+      <h2 class="location-title">Ubicaciones</h2>
+
+      <div class="location-container" data-aos="fade-right">
+        <!-- Misa -->
+        <div class="location-card">
+          <div class="location-image">
+            <!-- Aquí irá la imagen de la iglesia -->
+            <img src="img/iglesia.jpg" alt="Imagen de la parroquia" >
+            
+          </div>
+          <div class="location-info" >
+            <h3>Misa</h3>
+            <p>Parroquia de Nuestra Señora de Guadalupe</p>
+            <p>18 de marzo #309, Col. Manuel Ávila Camacho, Poza Rica, Ver.</p>
+            <a href="https://www.google.com/maps?q=Parroquia+de+Nuestra+Señora+de+Guadalupe,+Poza+Rica+Veracruz" target="_blank" class="map-btn">Ver en Google Maps</a>
+          </div>
+        </div>
+
+        <!-- Recepción -->
+        <div class="location-card" data-aos="fade-left">
+          <div class="location-image">
+            <!-- Aquí irá la imagen del salón -->
+            <img src="img/salon.jpg" alt="Imagen del salón D’Romherz">
+          </div>
+          <div class="location-info">
+            <h3>Recepción</h3>
+            <p>Salón D’Romherz</p>
+            <p>Calle 3 Oriente, Col. Miguel Hidalgo y Costilla, Poza Rica</p>
+            <a href="https://www.google.com/maps?q=Salón+D’Romherz,+Poza+Rica" target="_blank" class="map-btn">Ver en Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGRADECIMIENTO -->
+    <section class="thanks-section">
+      <div class="thanks-content" data-aos="fade-up">
+        <div class="thanks-icon">
+          <!-- Aquí va el ícono decorativo -->
+          <img src="icons/paloma.png" alt="Icono decorativo">
+        </div>
+        <h2>¡Gracias por acompañarnos!</h2>
+        <p>
+          Tu presencia hace este momento aún más especial para Santiago Elías y toda nuestra familia.
+        </p>
+      </div>
+    </section>
     </div>
   </div>
-</header>
-
-
-<!-- DATOS DEL BAUTIZADO -->
-<section class="info-section" id="datos-bautizado">
-  <h2 class="info-title" data-aos="fade-down">Con amor te invitamos al bautizo de</h2>
-  <p class="baby-name" data-aos="zoom-in" data-aos-delay="200">Santiago Elías Ramírez Torres</p>
-
-  <div class="family-info" data-aos="fade-up" data-aos-delay="400">
-    <p><strong>Hijo de:</strong><br> Andrés Ramírez López y Mariana Torres de Ramírez</p>
-    <p><strong>Padrinos:</strong><br> Joaquín Herrera Díaz y Beatriz Gómez Rivas</p>
-  </div>
-</section>
-
-
-<!--PROTOCOLO-->
-<section class="timeline-section">
-  <h2 class="timeline-title">Protocolo del evento</h2>
-
-  <div class="timeline" data-aos="fade-up">
-
-    <div class="timeline-item" data-aos="fade-right">
-      <div class="icon">
-        <!-- reemplaza con tu ícono de iglesia -->
-        <img src="icons/bautizo.png" alt="Icono Misa">
-      </div>
-      <div class="timeline-content">
-        <h3>12:00 PM</h3>
-        <p>Misa en la Parroquia de Nuestra Señora de Guadalupe</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-aos="fade-left">
-      <div class="icon">
-        <!-- reemplaza con tu ícono de llegada -->
-        <img src="icons/salon.png" alt="Icono Bienvenida">
-      </div>
-      <div class="timeline-content">
-        <h3>1:00 PM</h3>
-        <p>Bienvenida en Salón D’Romherz</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-aos="fade-right">
-      <div class="icon">
-        <!-- reemplaza con tu ícono de comida -->
-        <img src="icons/comida.png" alt="Icono Comida">
-      </div>
-      <div class="timeline-content">
-        <h3>2:00 PM</h3>
-        <p>Comida</p>
-      </div>
-    </div>
-
-    <div class="timeline-item" data-aos="fade-left">
-      <div class="icon">
-        <!-- reemplaza con tu ícono de show -->
-        <img src="icons/evento.png" alt="Icono Show">
-      </div>
-      <div class="timeline-content">
-        <h3>3:00 PM</h3>
-        <p>Show de payasos / Actividades recreativas</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!--UBICACIONES-->
-<section class="location-section">
-  <h2 class="location-title">Ubicaciones</h2>
-
-  <div class="location-container" data-aos="fade-right">
-    <!-- Misa -->
-    <div class="location-card">
-      <div class="location-image">
-        <!-- Aquí irá la imagen de la iglesia -->
-        <img src="img/iglesia.jpg" alt="Imagen de la parroquia" >
-        
-      </div>
-      <div class="location-info" >
-        <h3>Misa</h3>
-        <p>Parroquia de Nuestra Señora de Guadalupe</p>
-        <p>18 de marzo #309, Col. Manuel Ávila Camacho, Poza Rica, Ver.</p>
-        <a href="https://www.google.com/maps?q=Parroquia+de+Nuestra+Señora+de+Guadalupe,+Poza+Rica+Veracruz" target="_blank" class="map-btn">Ver en Google Maps</a>
-      </div>
-    </div>
-
-    <!-- Recepción -->
-    <div class="location-card" data-aos="fade-left">
-      <div class="location-image">
-        <!-- Aquí irá la imagen del salón -->
-        <img src="img/salon.jpg" alt="Imagen del salón D’Romherz">
-      </div>
-      <div class="location-info">
-        <h3>Recepción</h3>
-        <p>Salón D’Romherz</p>
-        <p>Calle 3 Oriente, Col. Miguel Hidalgo y Costilla, Poza Rica</p>
-        <a href="https://www.google.com/maps?q=Salón+D’Romherz,+Poza+Rica" target="_blank" class="map-btn">Ver en Google Maps</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AGRADECIMIENTO -->
-<section class="thanks-section">
-  <div class="thanks-content" data-aos="fade-up">
-    <div class="thanks-icon">
-      <!-- Aquí va el ícono decorativo -->
-      <img src="icons/paloma.png" alt="Icono decorativo">
-    </div>
-    <h2>¡Gracias por acompañarnos!</h2>
-    <p>
-      Tu presencia hace este momento aún más especial para Santiago Elías y toda nuestra familia.
-    </p>
-  </div>
-</section>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
