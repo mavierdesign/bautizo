@@ -645,7 +645,7 @@ color: #6d0000;
   background-image: url('icons/volando.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.6;
+  opacity: 0.4;
   z-index: 10;
   pointer-events: none;
   animation-timing-function: linear;
