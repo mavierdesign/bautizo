@@ -751,3 +751,14 @@ color: #6d0000;
     opacity: 0.4;
   }
 }
+
+.pool-banner {
+  background: #fffbe6;
+  color: #6d0000;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px dashed #deb52f;
+  border-bottom: 2px dashed #deb52f;
+  animation: fadeInUp 1s ease;
+}
